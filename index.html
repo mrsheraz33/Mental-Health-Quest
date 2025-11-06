@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiritual Data - Personalized Quest Creation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>Spiritual Data</h1>
+            <p>Create Your Personalized Quest for Transformation</p>
+        </div>
+
+        <!-- Persona Selection -->
+        <div class="persona-selector">
+            <div class="persona-btn" onclick="selectPersona('transformer')">
+                🦋 Transformer<br>
+                <small>Reinventing yourself</small>
+            </div>
+            <div class="persona-btn" onclick="selectPersona('achiever')">
+                🚀 Achiever<br>
+                <small>Pushing your potential</small>
+            </div>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+
+        <!-- Step 1: Vision & Context -->
+        <div class="step active" id="step1">
+            <div class="step-number">1</div>
+            <h3>Define Your Vision & Current Reality</h3>
+            
+            <div class="form-group">
+                <label>Long-term Vision / Ultimate Goal</label>
+                <textarea placeholder="Describe your ideal future self and what you want to achieve..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Current Situation & Challenges</label>
+                <textarea placeholder="What's holding you back? Current struggles, limitations..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Primary Area of Focus</label>
+                <div class="options-grid">
+                    <div class="option-card" onclick="selectOption(this, 'career')">
+                        💼 Career Transition
+                    </div>
+                    <div class="option-card" onclick="selectOption(this, 'mental_health')">
+                        🧠 Mental Health
+                    </div>
+                    <div class="option-card" onclick="selectOption(this, 'spiritual')">
+                        🌟 Spiritual Growth
+                    </div>
+                    <div class="option-card" onclick="selectOption(this, 'relationships')">
+                        💝 Relationships
+                    </div>
+                    <div class="option-card" onclick="selectOption(this, 'psychic')">
+                        🔮 Psychic Development
+                    </div>
+                    <div class="option-card" onclick="selectOption(this, 'character')">
+                        ⚡ Character Development
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2: AI Quest Generation -->
+        <div class="step" id="step2">
+            <div class="step-number">2</div>
+            <h3>Your AI-Generated Quest Plan</h3>
+            
+            <div class="gamification">
+                <div class="level-display">🎯 Your Quest: Level 1</div>
+                <div class="progress-container">
+                    <div class="progress-fill" style="width: 10%"></div>
+                </div>
+                <p>Complete strategies to level up and unlock new abilities!</p>
+            </div>
+
+            <div class="strategy-item">
+                <div class="strategy-header">
+                    <h4>Morning Meditation Practice (15 mins daily)</h4>
+                    <div class="strategy-actions">
+                        <button class="btn-small btn-accept" onclick="acceptStrategy(this)">Accept</button>
+                        <button class="btn-small btn-reject" onclick="rejectStrategy(this)">Reject</button>
+                    </div>
+                </div>
+                <div class="evidence-section">
+                    <h4>📊 Evidence & Research</h4>
+                    <div class="stats-grid">
+                        <div class="stat-item">78% reduced anxiety<br>(Harvard Study)</div>
+                        <div class="stat-item">45% better focus<br>(Stanford Research)</div>
+                        <div class="stat-item">62% spiritual connection<br>(SD Community Data)</div>
+                    </div>
+                    <p style="margin-top: 10px; font-size: 12px;">Based on 2,347 successful transformations with similar goals</p>
+                </div>
+            </div>
+
+            <div class="strategy-item">
+                <div class="strategy-header">
+                    <h4>Weekly Shadow Work Journaling</h4>
+                    <div class="strategy-actions">
+                        <button class="btn-small btn-accept" onclick="acceptStrategy(this)">Accept</button>
+                        <button class="btn-small btn-reject" onclick="rejectStrategy(this)">Reject</button>
+                    </div>
+                </div>
+                <div class="evidence-section">
+                    <h4>📊 Evidence & Research</h4>
+                    <div class="stats-grid">
+                        <div class="stat-item">85% reduced reactivity<br>(Jungian Studies)</div>
+                        <div class="stat-item">3.2x self-awareness<br>(Psychology Today)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Edit or Add Custom Strategies</label>
+                <textarea placeholder="Add your own strategies or modify the AI suggestions..."></textarea>
+            </div>
+        </div>
+
+        <!-- Step 3: Mentor & Community -->
+        <div class="step" id="step3">
+            <div class="step-number">3</div>
+            <h3>Mentor Support & Community</h3>
+
+            <div class="mentor-card">
+                <div class="mentor-avatar">SD</div>
+                <div>
+                    <h4>Sarah Johnson - Spiritual Data Mentor</h4>
+                    <p>✅ Verified: 247 successful quests completed</p>
+                    <p>🎯 Specializes: Career Transition & Anxiety</p>
+                    <button class="btn-small btn-primary">Request Guidance</button>
+                </div>
+            </div>
+
+            <div class="community-section">
+                <h4>👥 Community Support</h4>
+                <p>Join 284 people on similar quests in "Career Transformers" group</p>
+                <div style="margin-top: 15px;">
+                    <button class="btn-small btn-outline">Share Progress</button>
+                    <button class="btn-small btn-primary">Join Community</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Mentor Follow-up Preferences</label>
+                <select>
+                    <option>Weekly check-ins</option>
+                    <option>Bi-weekly guidance</option>
+                    <option>Monthly reviews</option>
+                    <option>Only when stuck</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Step 4: Launch Quest -->
+        <div class="step" id="step4">
+            <div class="step-number">4</div>
+            <h3>Launch Your Quest! 🚀</h3>
+
+            <div class="gamification">
+                <div class="level-display">🎯 Quest Ready: 12-Month Transformation</div>
+                <div style="font-size: 14px; margin: 10px 0;">
+                    📈 Projected Success Rate: 87%<br>
+                    ⏱️ Estimated: 15-30 mins daily
+                </div>
+            </div>
+
+            <div class="evidence-section">
+                <h4>🎊 Welcome to Your Transformation Journey!</h4>
+                <p>Your personalized quest combines:</p>
+                <ul style="margin: 10px 0; padding-left: 20px;">
+                    <li>AI-powered strategy optimization</li>
+                    <li>Evidence-based practices</li>
+                    <li>Mentor guidance system</li>
+                    <li>Community support network</li>
+                    <li>Progress tracking & gamification</li>
+                </ul>
+            </div>
+
+            <div style="text-align: center; margin: 20px 0;">
+                <button class="btn btn-primary" style="font-size: 18px; padding: 15px 30px;" onclick="launchQuest()">
+                    🚀 Launch My Quest!
+                </button>
+            </div>
+        </div>
+
+        <div class="nav-buttons">
+            <button class="btn btn-outline" onclick="previousStep()" id="prevBtn" style="display: none;">← Previous</button>
+            <button class="btn btn-primary" onclick="nextStep()" id="nextBtn">Next →</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    
+</body>
+</html>
